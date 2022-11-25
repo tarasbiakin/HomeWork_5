@@ -37,7 +37,7 @@ int ArraySumEven(int[] arr)
     return res;
 }
 
-int[]array= CreateArrayRndDouble(8, 100, 999);
+int[]array= CreateArrayRndDouble(8, 100, 1000);
 PrintArrau(array, "[", "]");
 int res =  ArraySumEven(array);
 
