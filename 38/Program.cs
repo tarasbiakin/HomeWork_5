@@ -11,19 +11,18 @@ double[]CreateArrayRndDouble(int size, double min, double max)
     return arr;
 }
 
-void PrintArrau(double[]arr){
+void PrintArrau(double[]arr,string symb1, string symb2){
 
-Console.Write( "Результат: ");
-Console.Write("[");
+Console.Write(symb1);
 
    for(int i= 0; i<arr.Length;i++)
    { 
     if (i<arr.Length-1){
-        Console.Write($"{arr[i]}, ");}
+        Console.Write($"{Math.Round(arr[i],2)}, ");}
         else 
-        Console.Write($"{arr[i]}");
+        Console.Write($"{Math.Round(arr[i],2)}");
     }
-    Console.WriteLine("]");
+    Console.Write(symb2);
     
 }
 
@@ -46,15 +45,15 @@ return max;
 }
 
 double[]array= CreateArrayRndDouble(12, 5.2, -9.5);
-PrintArrau(array);
+PrintArrau(array, "[", "]");
 double minimum =  ArrayDoubleMin(array);
 double maximum =  ArrayDoubleMax(array);
 double result =  maximum-minimum;
 
 
-Console.WriteLine($"Минимальное число = {minimum}");
-Console.WriteLine($"Максимальное число = {maximum}");
-Console.WriteLine($"Результат = {result}");
+// Console.WriteLine($"Минимальное число = {Math.Round(minimum,2)}");
+// Console.WriteLine($"Максимальное число = {Math.Round(maximum,2)}");
+Console.WriteLine($"--> {Math.Round(result,2)}");
 
 
 
