@@ -32,7 +32,7 @@ int ArraySumEven(int[] arr)
     int res = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] % 2 == 0) res = res +arr[i];
+        if (arr[i] % 2 == 0) res = res +1;//+arr[i];
     }
     return res;
 }
